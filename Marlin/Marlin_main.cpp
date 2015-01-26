@@ -444,6 +444,7 @@ void setup()
   setup_killpin();
   setup_powerhold();
   MYSERIAL.begin(BAUDRATE);
+  //while (!MYSERIAL);
   SERIAL_PROTOCOLLNPGM("start");
   SERIAL_ECHO_START;
 
@@ -892,7 +893,7 @@ static void run_z_probe() {
 
 #ifdef DELTA
   #ifdef FSR_BED_LEVELING
-    feedrate = 600; //mm/min
+    feedrate = homing_feedrate[Z_AXIS]; //mm/min
     float step = 0.05;
     int direction = -1;
     // Consider the glass touched if the raw ADC value is reduced by 5% or more.
