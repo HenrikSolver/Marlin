@@ -1585,6 +1585,7 @@
   #define Y_STOP_PIN          8
   #define Z_MAX_PIN          36
   #define Z_MIN_PIN          37  // Use E-STOP for autolevel Z probe
+  #define FSR_PIN             2
   #define TEMP_0_PIN          1  // Extruder / Analog pin numbering
   #define TEMP_BED_PIN        0  // Bed / Analog pin numbering
 #endif
